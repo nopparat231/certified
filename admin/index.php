@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include("../conn.php"); ?>
 <head>
 
     <meta charset="utf-8">
@@ -53,15 +53,15 @@
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item">
-                <a class="nav-link" href="index.php?ethnic">
+                <a class="nav-link" href="index.php?cer">
                     <i class="fas fa-list-ul" aria-hidden="true"></i>
-                    <span>ชาติพันธุ์</span></a>
+                    <span>เพิ่มข้อมูล พระเครื่อง</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="index.php?amcustom">
+                <a class="nav-link" href="index.php?user">
                     <i class="fas fa-list-ul" aria-hidden="true"></i>
-                    <span>ประเพณี</span></a>
+                    <span>ข้อมูล ผู้ใช้งาน</span></a>
             </li>
 
 
@@ -109,19 +109,11 @@
                 
                     <?php
 
-                    if (isset($_GET['ethnic'])) {
-                        include('ethnic.php');
-                    } elseif (isset($_GET['amcustom'])) {
-                        include('amcustom.php');
-                    } elseif (isset($_GET['amfood'])) {
-                        include('amfood.php');
-                    } elseif (isset($_GET['amclothes'])) {
-                        include('amclothe.php');
-                    } elseif (isset($_GET['amallplace'])) {
-                        include('amallplace.php');
-                    } elseif (isset($_GET['users'])) {
-                        include('users.php');
-                    } else {
+                    if (isset($_GET['cer'])) {
+                        include('home.php');
+                    } elseif (isset($_GET['user'])) {
+                        include('user.php');
+                    }else {
                         echo "<h1 class='h3 mb-4 text-gray-800'>ยินดีต้อนรับ Admin</h1>";
                     }
 
@@ -137,7 +129,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Ethnic 2022</span>
+                        <span>Copyright &copy; Certified 2022</span>
                     </div>
                 </div>
             </footer>
