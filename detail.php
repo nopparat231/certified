@@ -36,7 +36,7 @@ if (isset($_GET['id_card'])) {
                     <div class="card-body">
                         <br>
                         <h3 class="card-title" style="text-align: center;">* <?= $row['cer_m_name'] ?> *</h3>
-                        <h5 class="card-title" style="text-align: center;">กรุวัดพลับ</h5>
+                        <h5 class="card-title" style="text-align: center;"><?= $row['cer_temple'] ?></h5>
 
                         <div class="row justify-content-center">
                             <div class="col-sm-6">
@@ -45,42 +45,38 @@ if (isset($_GET['id_card'])) {
 
                                         <div class="card border-0" style="width: 100%;">
                                             <!-- <img src="https://fakeimg.pl/350x250/?text=imgEx" class="card-img-top" alt="img" width="100%" height="100%"> -->
-
-
-                                            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 400px;">
-                                                <div class="carousel-indicators">
-                                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-                                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
-
-                                                </div>
-                                                <div class="carousel-inner">
-                                                    <div class="carousel-item active">
-
-                                                        <img src="./uploads/<?= $row['cer_img'] ?>" class="card-img-top" alt="img" width="600px" height="400px">
-
-                                                    </div>
-                                                    <div class="carousel-item ">
-                                                        <img src="https://fakeimg.pl/600x400/?text=Back" class="card-img-top" alt="img" width="600px" height="400px">
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
+                                            <a href="./uploads/<?= $row['cer_img'] ?>" target="_blank"><img src="./uploads/<?= $row['cer_img'] ?>" class="card-img-top" alt="..."></a>
 
                                             <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <h3 class="card-title">ข้อมูลทั่วไป</h3>
+
                                             </div>
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">An item</li>
-                                                <li class="list-group-item">A second item</li>
-                                                <li class="list-group-item">A third item</li>
+                                            <ul class="list-group list-group-flush fs-5">
+                                                <li class="list-group-item d-flex">
+                                                    <span class="w-50">หมายเลขบัตรรับรอง </span><span><?= $row['id_card'] ?></span>
+                                                </li>
+                                                <li class="list-group-item d-flex">
+                                                    <span class="w-50">วันออกบัตรรับรอง </span><span><?= $row['cer_start'] ?></span>
+                                                </li>
+                                                <li class="list-group-item d-flex">
+                                                    <span class="w-50">ประเภทพระ</span><span><?= $row['cer_m_type'] ?></span>
+                                                </li>
+                                                <li class="list-group-item d-flex">
+                                                    <span class="w-50">ชื่อพระ </span><span><?= $row['cer_m_name'] ?></span>
+                                                </li>
+                                                <li class="list-group-item d-flex">
+                                                    <span class="w-50">วัด / กรุ </span><span><?= $row['cer_temple'] ?></span>
+                                                </li>
+                                                <li class="list-group-item d-flex">
+                                                    <span class="w-50">จังหวัด </span><span><?= $row['cer_province'] ?></span>
+                                                </li>
+                                                <li class="list-group-item d-flex">
+                                                    <span class="w-50">เจ้าของพระ </span><span><?= $row['cer_name'] ?></span>
+                                                </li>
+
+
                                             </ul>
-                                            <div class="card-body">
-                                                <a href="#" class="card-link">Card link</a>
-                                                <a href="#" class="card-link">Another link</a>
-                                            </div>
+
                                         </div>
 
                                     </div>
@@ -93,25 +89,25 @@ if (isset($_GET['id_card'])) {
                             <div class="row row-cols-1 row-cols-md-2 g-2">
                                 <div class="col">
                                     <div class="card">
-                                        <a href="https://fakeimg.pl/600x600/?text=imgEx" target="_blank"><img src="https://fakeimg.pl/600x600/?text=imgEx" class="card-img-top" alt="..."></a>
+                                        <a href="./uploads/<?= $row['cer_img_1'] ?>" target="_blank"><img src="./uploads/<?= $row['cer_img_1'] ?>" class="card-img-top" alt="..."></a>
 
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="card">
-                                        <a href="https://fakeimg.pl/600x600/?text=imgEx" target="_blank"><img src="https://fakeimg.pl/600x600/?text=imgEx" class="card-img-top" alt="..."></a>
+                                        <a href="./uploads/<?= $row['cer_img_2'] ?>" target="_blank"><img src="./uploads/<?= $row['cer_img_2'] ?>" class="card-img-top" alt="..."></a>
 
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="card">
-                                        <a href="https://fakeimg.pl/600x600/?text=imgEx" target="_blank"><img src="https://fakeimg.pl/600x600/?text=imgEx" class="card-img-top" alt="..."></a>
+                                        <a href="./uploads/<?= $row['cer_img_3'] ?>" target="_blank"><img src="./uploads/<?= $row['cer_img_3'] ?>" class="card-img-top" alt="..."></a>
 
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="card">
-                                        <a href="https://fakeimg.pl/600x600/?text=imgEx" target="_blank"><img src="https://fakeimg.pl/600x600/?text=imgEx" class="card-img-top" alt="..."></a>
+                                        <a href="./uploads/<?= $row['cer_img_4'] ?>" target="_blank"><img src="./uploads/<?= $row['cer_img_4'] ?>" class="card-img-top" alt="..."></a>
 
                                     </div>
                                 </div>
