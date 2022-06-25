@@ -439,6 +439,14 @@
 
         var files = $('#pic_cer_img')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
+        const size =
+            (this.files[0].size / 1024 / 1024).toFixed(2);
+
+        if (size > 0.5) {
+            alert("รูปภาพต้องไม่เกิน 500kb");
+            this.value = '';
+        }
+
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -462,7 +470,7 @@
                 }
             });
         } else {
-            alert("Please select a file.");
+            //alert("Please select a file.");
         }
     });
 
@@ -473,6 +481,13 @@
 
         var files = $('#pic_cer_img_1')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
+        const size =
+            (this.files[0].size / 1024 / 1024).toFixed(2);
+
+        if (size > 0.5) {
+            alert("รูปภาพต้องไม่เกิน 500kb");
+            this.value = '';
+        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -496,7 +511,7 @@
                 }
             });
         } else {
-            alert("Please select a file.");
+            //alert("Please select a file.");
         }
     });
 
@@ -507,6 +522,13 @@
 
         var files = $('#pic_cer_img_2')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
+        const size =
+            (this.files[0].size / 1024 / 1024).toFixed(2);
+
+        if (size > 0.5) {
+            alert("รูปภาพต้องไม่เกิน 500kb");
+            this.value = '';
+        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -530,7 +552,7 @@
                 }
             });
         } else {
-            alert("Please select a file.");
+            //alert("Please select a file.");
         }
     });
 
@@ -541,6 +563,13 @@
 
         var files = $('#pic_cer_img_3')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
+        const size =
+            (this.files[0].size / 1024 / 1024).toFixed(2);
+
+        if (size > 0.5) {
+            alert("รูปภาพต้องไม่เกิน 500kb");
+            this.value = '';
+        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -564,7 +593,7 @@
                 }
             });
         } else {
-            alert("Please select a file.");
+            //alert("Please select a file.");
         }
     });
 
@@ -575,6 +604,13 @@
 
         var files = $('#pic_cer_img_4')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
+        const size =
+            (this.files[0].size / 1024 / 1024).toFixed(2);
+
+        if (size > 0.5) {
+            alert("รูปภาพต้องไม่เกิน 500kb");
+            this.value = '';
+        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -598,7 +634,7 @@
                 }
             });
         } else {
-            alert("Please select a file.");
+            //alert("Please select a file.");
         }
     });
 </script>
