@@ -21,7 +21,7 @@
 
                 <div class="mb-1">
                     <label for="cer_start" class="form-label">cer_start</label>
-                    <input type="date" class="form-control" id="cer_start" name="cer_start" autocomplete="off" required>
+                    <input type="text" class="form-control" id="datepicker" name="cer_start" autocomplete="off" required>
                 </div>
 
                 <div class="mb-3">

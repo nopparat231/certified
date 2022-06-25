@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("../conn.php"); ?>
+
 <head>
 
     <meta charset="utf-8">
@@ -25,14 +26,25 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-    <!-- ค้นหาไอค่อน -->
-    <!-- https://fontawesome.com/v4/icons/ -->
+    <!-- วันที่ไทย -->
+    <link href="css/datepicker.css" rel="stylesheet">
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker-thai.js"></script>
+    <script type="text/javascript" src="js/locales/bootstrap-datepicker.th.js"></script>
+
+    <script>
+        $(function() {
+            $("#datepicker").datepicker({
+                language: 'th-th',
+                format: 'dd/mm/yyyy',
+                autoclose: true
+            });
+        });
+    </script>
 
 </head>
 
@@ -57,12 +69,12 @@
                     <i class="fas fa-list-ul" aria-hidden="true"></i>
                     <span>เพิ่มข้อมูล พระเครื่อง</span></a>
             </li>
-
+            <!-- 
             <li class="nav-item">
                 <a class="nav-link" href="index.php?user">
                     <i class="fas fa-list-ul" aria-hidden="true"></i>
                     <span>ข้อมูล ผู้ใช้งาน</span></a>
-            </li>
+            </li> -->
 
 
             <!-- Divider -->
@@ -106,14 +118,14 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                
+
                     <?php
 
                     if (isset($_GET['cer'])) {
                         include('home.php');
                     } elseif (isset($_GET['user'])) {
                         include('user.php');
-                    }else {
+                    } else {
                         echo "<h1 class='h3 mb-4 text-gray-800'>ยินดีต้อนรับ Admin</h1>";
                     }
 
@@ -151,6 +163,10 @@
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
 
 </body>
 
