@@ -3,9 +3,11 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 3rem;
+
   color: #5a5a5a;
   background-color: #FAF5EF;
+  /* background: linear-gradient(329deg, rgb(235, 215, 189) 0%, rgb(231, 225, 215) 48%, rgb(209, 191, 164) 100%)  !important */
+
 }
 
 /* CUSTOMIZE THE CAROUSEL

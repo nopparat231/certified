@@ -10,24 +10,44 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- My Css -->
     <link rel="stylesheet" href="./css/costomize.css">
+    <style>
+        .navbar-home {
+            background-color: #fdfef1;
+            /* position: absolute; */
+            top: 0px;
+            width: 100%;
+            margin-top: 2rem;
+            z-index: 0;
+            background: linear-gradient(329deg, rgba(109,81,44,1) 0%, rgba(194,161,110,1) 48%, rgba(185,153,106,1) 100%)  !important
+
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-         
-        </a>
-
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 " >
-            <li><a href="index.php" class="nav-link px-2 link-secondary"><i class="fas fa-home"></i> หน้าหลัก</a></li>
-            <li><a href="?content" class="nav-link px-2 link-dark"><i class="fas fa-certificate"></i> ค้นหาใบรับรอง</a></li>
-            
-            <li><a href="#" class="nav-link px-2 link-dark"><i class="fab fa-facebook"></i> ติดต่อผู้ให้บริการ</a></li>
-        </ul>
-
-        <div class="col-md-3 text-end">
-            <a href="?login" class="nav-link px-2 link-dark me-5">เข้าสู่ระบบ</a>
-            <!-- <button type="button" class="btn btn-primary">Sign-up</button> -->
+    <nav class="navbar navbar-home navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5" href="index.php">Certified</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item me-5">
+                        <a href="index.php" class="nav-link px-2 link-secondary active"><i class="fas fa-home"></i> หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a href="?content" class="nav-link px-2 link-dark"><i class="fas fa-certificate"></i> ค้นหาใบรับรอง</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a href="https://www.facebook.com/" target="_bank" class="nav-link px-2 link-dark"><i class="fab fa-facebook"></i> ติดต่อผู้ให้บริการ</a>
+                    </li>
+                </ul>
+                <span class="nav-item ">
+                    <a href="?login" class="nav-link px-2 link-dark float-end"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a>
+                </span>
+            </div>
         </div>
-    </header>
+    </nav>
