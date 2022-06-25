@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_1" class="form-label">รูปบัตร 1</label>
+                    <label for="cer_img_1" class="form-label">รูปพระ 1</label>
                     <div class='preview'>
                         <img src="" id="cer_img_1" style="width: 300px;height: 200px;">
                     </div>
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_2" class="form-label">รูปบัตร 2</label>
+                    <label for="cer_img_2" class="form-label">รูปพระ 2</label>
                     <div class='preview'>
                         <img src="" id="cer_img_2" style="width: 300px;height: 200px;">
                     </div>
@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_3" class="form-label">รูปบัตร 3</label>
+                    <label for="cer_img_3" class="form-label">รูปพระ 3</label>
                     <div class='preview'>
                         <img src="" id="cer_img_3" style="width: 300px;height: 200px;">
                     </div>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_4" class="form-label">รูปบัตร 4</label>
+                    <label for="cer_img_4" class="form-label">รูปพระ 4</label>
                     <div class='preview'>
                         <img src="" id="cer_img_4" style="width: 300px;height: 200px;">
                     </div>
@@ -173,7 +173,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_1" class="form-label">รูปบัตร 1</label>
+                        <label for="cer_img_1" class="form-label">รูปพระ 1</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_1'] ?>" id="cer_img_1" style="width: 300px;height: 200px;">
                         </div>
@@ -182,7 +182,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_2" class="form-label">รูปบัตร 2</label>
+                        <label for="cer_img_2" class="form-label">รูปพระ 2</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_2'] ?>" id="cer_img_2" style="width: 300px;height: 200px;">
                         </div>
@@ -191,7 +191,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_3" class="form-label">รูปบัตร 3</label>
+                        <label for="cer_img_3" class="form-label">รูปพระ 3</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_3'] ?>" id="cer_img_3" style="width: 300px;height: 200px;">
                         </div>
@@ -200,7 +200,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_4" class="form-label">รูปบัตร 4</label>
+                        <label for="cer_img_4" class="form-label">รูปพระ 4</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_4'] ?>" id="cer_img_4" style="width: 300px;height: 200px;">
                         </div>
