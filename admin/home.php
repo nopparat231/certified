@@ -15,44 +15,44 @@
             <form action="?cer&add_db" method="post">
 
                 <div class="mb-3">
-                    <label for="id_card" class="form-label">รหัสพระเครื่อง</label>
+                    <label for="id_card" class="form-label">หมายเลขบัตรรับรอง</label>
                     <input type="text" class="form-control" id="id_card" name="id_card" autocomplete="off" required>
                 </div>
 
                 <div class="mb-1">
-                    <label for="cer_start" class="form-label">cer_start</label>
+                    <label for="cer_start" class="form-label">วันออกบัตรรับรอง</label>
                     <input type="text" class="form-control" id="datepicker" name="cer_start" autocomplete="off" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_m_type" class="form-label"> cer_m_type</label>
+                    <label for="cer_m_type" class="form-label">ประเภทพระ</label>
                     <input type="text" class="form-control" id="cer_m_type" name="cer_m_type" autocomplete="off" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_m_name" class="form-label"> cer_m_name</label>
+                    <label for="cer_m_name" class="form-label">ชื่อพระ</label>
                     <input type="text" class="form-control" id="cer_m_name" name="cer_m_name" autocomplete="off" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_temple" class="form-label"> cer_temple</label>
+                    <label for="cer_temple" class="form-label">วัด / กรุ</label>
                     <input type="text" class="form-control" id="cer_temple" name="cer_temple" autocomplete="off" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_province" class="form-label">cer_province</label>
+                    <label for="cer_province" class="form-label">จังหวัด</label>
                     <select type="text" class="form-control select2" name="cer_province" id="cer_province" placeholder="จังหวัด" required>
                         <option></option>
                     </select>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_name" class="form-label"> cer_name</label>
+                    <label for="cer_name" class="form-label">เจ้าของพระ</label>
                     <input type="text" class="form-control" id="cer_name" name="cer_name" autocomplete="off" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img" class="form-label"> cer_img</label>
+                    <label for="cer_img" class="form-label">รูปบัตร</label>
                     <div class='preview'>
                         <img src="" id="cer_img" style="width: 300px;height: 200px;">
                     </div>
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_1" class="form-label"> cer_img_1</label>
+                    <label for="cer_img_1" class="form-label">รูปบัตร 1</label>
                     <div class='preview'>
                         <img src="" id="cer_img_1" style="width: 300px;height: 200px;">
                     </div>
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_2" class="form-label"> cer_img_2</label>
+                    <label for="cer_img_2" class="form-label">รูปบัตร 2</label>
                     <div class='preview'>
                         <img src="" id="cer_img_2" style="width: 300px;height: 200px;">
                     </div>
@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_3" class="form-label"> cer_img_3</label>
+                    <label for="cer_img_3" class="form-label">รูปบัตร 3</label>
                     <div class='preview'>
                         <img src="" id="cer_img_3" style="width: 300px;height: 200px;">
                     </div>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cer_img_4" class="form-label"> cer_img_4</label>
+                    <label for="cer_img_4" class="form-label">รูปบัตร 4</label>
                     <div class='preview'>
                         <img src="" id="cer_img_4" style="width: 300px;height: 200px;">
                     </div>
@@ -96,8 +96,8 @@
                     <input type="hidden" name="cer_img_4" value="">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-danger" onclick="history.back()">Cancle</a>
+                <button type="submit" class="btn btn-primary">ตกลง</button>
+                <a class="btn btn-danger" onclick="history.back()">ยกเลิก</a>
             </form>
 
         </div>
@@ -128,43 +128,43 @@
                 <form action="?cer&edit_db" method="post">
 
                     <div class="mb-3">
-                        <label for="id_card" class="form-label">รหัสพระเครื่อง</label>
+                        <label for="id_card" class="form-label">หมายเลขบัตรรับรอง</label>
                         <input type="text" class="form-control" id="id_card" name="id_card" value="<?php echo $row['id_card'] ?>" autocomplete="off" required readonly>
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_start" class="form-label">cer_start</label>
+                        <label for="cer_start" class="form-label">วันออกบัตรรับรอง</label>
                         <input type="text" class="form-control" id="cer_start" name="cer_start" value="<?php echo $row['cer_start'] ?>" autocomplete="off" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_m_type" class="form-label"> cer_m_type</label>
+                        <label for="cer_m_type" class="form-label">ประเภทพระ</label>
                         <input type="text" class="form-control" id="cer_m_type" name="cer_m_type" value="<?php echo $row['cer_m_type'] ?>" autocomplete="off" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_m_name" class="form-label"> cer_m_name</label>
+                        <label for="cer_m_name" class="form-label">ชื่อพระ</label>
                         <input type="text" class="form-control" id="cer_m_name" name="cer_m_name" value="<?php echo $row['cer_m_name'] ?>" autocomplete="off" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_temple" class="form-label"> cer_temple</label>
+                        <label for="cer_temple" class="form-label">วัด / กรุ</label>
                         <input type="text" class="form-control" id="cer_temple" name="cer_temple" value="<?php echo $row['cer_temple'] ?>" autocomplete="off" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_province" class="form-label">cer_province</label>
+                        <label for="cer_province" class="form-label">จังหวัด</label>
                         <input type="text" class="form-control" id="cer_province" name="cer_province" value="<?php echo $row['cer_province'] ?>" autocomplete="off" required>
 
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_name" class="form-label"> cer_name</label>
+                        <label for="cer_name" class="form-label">เจ้าของพระ</label>
                         <input type="text" class="form-control" id="cer_name" name="cer_name" value="<?php echo $row['cer_name'] ?>" autocomplete="off" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img" class="form-label"> cer_img</label>
+                        <label for="cer_img" class="form-label">รูปบัตร</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img'] ?>" id="cer_img" style="width: 300px;height: 200px;">
                         </div>
@@ -173,7 +173,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_1" class="form-label"> cer_img_1</label>
+                        <label for="cer_img_1" class="form-label">รูปบัตร 1</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_1'] ?>" id="cer_img_1" style="width: 300px;height: 200px;">
                         </div>
@@ -182,7 +182,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_2" class="form-label"> cer_img_2</label>
+                        <label for="cer_img_2" class="form-label">รูปบัตร 2</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_2'] ?>" id="cer_img_2" style="width: 300px;height: 200px;">
                         </div>
@@ -191,7 +191,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_3" class="form-label"> cer_img_3</label>
+                        <label for="cer_img_3" class="form-label">รูปบัตร 3</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_3'] ?>" id="cer_img_3" style="width: 300px;height: 200px;">
                         </div>
@@ -200,7 +200,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="cer_img_4" class="form-label"> cer_img_4</label>
+                        <label for="cer_img_4" class="form-label">รูปบัตร 4</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img_4'] ?>" id="cer_img_4" style="width: 300px;height: 200px;">
                         </div>
@@ -209,8 +209,8 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a class="btn btn-danger" onclick="history.back()">Cancle</a>
+                    <button type="submit" class="btn btn-primary">ตกลง</button>
+                    <a class="btn btn-danger" onclick="history.back()">ยกเลิก</a>
                 </form>
 
             </div>
@@ -358,18 +358,18 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>รหัส</th>
-                            <th>cer_start</th>
-                            <th>cer_m_type</th>
-                            <th>cer_m_name</th>
-                            <th>cer_temple</th>
-                            <th>cer_province</th>
-                            <th>cer_name</th>
-                            <th>cer_img</th>
-                            <th>cer_img_1</th>
-                            <th>cer_img_2</th>
-                            <th>cer_img_3</th>
-                            <th>cer_img_4</th>
+                            <th>หมายเลขบัตรรับรอง</th>
+                            <th>วันออกบัตรรับรอง</th>
+                            <th>ประเภทพระ</th>
+                            <th>ชื่อพระ</th>
+                            <th>วัด / กรุ</th>
+                            <th>จังหวัด</th>
+                            <th>เจ้าของพระ</th>
+                            <th>รูปบัตร</th>
+                            <th>รูปพระ 1</th>
+                            <th>รูปพระ 2</th>
+                            <th>รูปพระ 3</th>
+                            <th>รูปพระ 4</th>
 
                             <th>แก้ไข</th>
                             <th>ลบ</th>
