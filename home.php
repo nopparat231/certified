@@ -7,11 +7,11 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
 
-            <img src="https://fakeimg.pl/800x400/?text=S1" alt="img" width="100%" height="100%">
+            <img src="./ref/webbanner.png" alt="img" width="100%" height="100%">
 
             <div class="container">
                 <div class="carousel-caption ">
-                    <h1>Example headline.</h1>
+                    <h1>ตัวอย่างข้อความเกี่ยวกับเว็บ</h1>
                     <p>Some representative placeholder content for the first slide of the carousel.</p>
 
                 </div>
@@ -22,7 +22,7 @@
 
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
+                    <h1>ตัวอย่างข้อความเกี่ยวกับเว็บ.</h1>
                     <p>Some representative placeholder content for the second slide of the carousel.</p>
 
                 </div>
@@ -33,7 +33,7 @@
 
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>One more for good measure.</h1>
+                    <h1>ตัวอย่างข้อความเกี่ยวกับเว็บ.</h1>
                     <p>Some representative placeholder content for the third slide of this carousel.</p>
 
                 </div>
