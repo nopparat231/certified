@@ -5,6 +5,7 @@
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <input type="hidden" name="detail">
             <input name="id_card" class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="เลขที่ใบรับรอง" aria-label="Search">
             <div class="navbar-nav">
                 <div class="nav-item text-nowrap">
