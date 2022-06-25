@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("../conn.php"); ?>
+<?php include("check_login.php"); ?>
 
 <head>
 
@@ -62,6 +63,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-text mx-3">Admin Certified</div>
+                <div class="sidebar-brand-icon">
+                <img src="../ref/img/logo.png" alt="Logo"  class='img-fluid' >
+            </div>
             </a>
 
             <!-- Divider -->
@@ -84,7 +88,7 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item">
-                <a class="nav-link" href="../index.php">
+                <a class="nav-link" href="../logout.php">
                     <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
                     <span> ออกจากระบบ </span></a>
             </li>
