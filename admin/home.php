@@ -52,6 +52,11 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="cer_other" class="form-label">อื่นๆ</label>
+                    <textarea class="form-control" id="cer_other" name="cer_other" autocomplete="off" required></textarea>
+                </div>
+
+                <div class="mb-3">
                     <label for="cer_img" class="form-label">รูปบัตร</label>
                     <div class='preview'>
                         <img src="" id="cer_img" style="width: 300px;height: 200px;">
@@ -164,6 +169,11 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="cer_other" class="form-label">อื่นๆ</label>
+                        <textarea class="form-control" id="cer_other" name="cer_other" autocomplete="off" required><?php echo $row['cer_other'] ?></textarea>
+                    </div>
+
+                    <div class="mb-3">
                         <label for="cer_img" class="form-label">รูปบัตร</label>
                         <div class='preview'>
                             <img src="../uploads/<?php echo $row['cer_img'] ?>" id="cer_img" style="width: 300px;height: 200px;">
@@ -231,6 +241,7 @@
         $cer_m_name = $_POST["cer_m_name"];
         $cer_temple = $_POST["cer_temple"];
         $cer_province = $_POST["cer_province"];
+        $cer_other = $_POST["cer_other"];
         $cer_name = $_POST["cer_name"];
         $cer_img = $_POST["cer_img"];
         $cer_img_1 = $_POST["cer_img_1"];
@@ -254,6 +265,7 @@
                     '" . $cer_temple . "',
                     '" . $cer_province . "',
                     '" . $cer_name . "',
+                    '" . $cer_other . "',
                     '" . $cer_img . "',
                     '" . $cer_img_1 . "',
                     '" . $cer_img_2 . "',
@@ -296,6 +308,7 @@
         , cer_temple =  '" . $_POST['cer_temple'] . "'
         , cer_province =  '" . $_POST['cer_province'] . "'
         , cer_name =  '" . $_POST['cer_name'] . "'
+        , cer_other =  '" . $_POST['cer_other'] . "'
         , cer_img =  '" . $_POST['cer_img'] . "'
         , cer_img_1 =  '" . $_POST['cer_img_1'] . "'
         , cer_img_2 =  '" . $_POST['cer_img_2'] . "'
@@ -365,6 +378,7 @@
                             <th>วัด / กรุ</th>
                             <th>จังหวัด</th>
                             <th>เจ้าของพระ</th>
+                            <th>อื่นๆ</th>
                             <th>รูปบัตร</th>
                             <th>รูปพระ 1</th>
                             <th>รูปพระ 2</th>
@@ -382,7 +396,7 @@
                         $sql1 = "SELECT * FROM cer ";
                         $q1 = mysqli_query($conn, $sql1);
                         while ($row = mysqli_fetch_array($q1)) {
-
+                            
                             echo "<tr>";
                             echo "<td>" . $row['id_card'] . "</td>";
                             echo "<td>" . $row['cer_start'] . "</td>";
@@ -391,6 +405,7 @@
                             echo "<td>" . $row['cer_temple'] . "</td>";
                             echo "<td>" . $row['cer_province'] . "</td>";
                             echo "<td>" . $row['cer_name'] . "</td>";
+                            echo "<td>" . $row['cer_other'] . "</td>";
                             echo "<td> <a href='../uploads/" . $row['cer_img'] . "' target='_blank'><img src='../uploads/" . $row['cer_img'] . "' class='img-fluid' ></a> </td>";
                             echo "<td> <a href='../uploads/" . $row['cer_img_1'] . "' target='_blank'><img src='../uploads/" . $row['cer_img_1'] . "' class='img-fluid' ></a> </td>";
                             echo "<td> <a href='../uploads/" . $row['cer_img_2'] . "' target='_blank'><img src='../uploads/" . $row['cer_img_2'] . "' class='img-fluid' ></a> </td>";
@@ -439,13 +454,7 @@
 
         var files = $('#pic_cer_img')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
-        const size =
-            (this.files[0].size / 1024 / 1024).toFixed(2);
 
-        if (size > 0.5) {
-            alert("รูปภาพต้องไม่เกิน 500kb");
-            this.value = '';
-        }
 
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
@@ -481,13 +490,7 @@
 
         var files = $('#pic_cer_img_1')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
-        const size =
-            (this.files[0].size / 1024 / 1024).toFixed(2);
 
-        if (size > 0.5) {
-            alert("รูปภาพต้องไม่เกิน 500kb");
-            this.value = '';
-        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -522,13 +525,7 @@
 
         var files = $('#pic_cer_img_2')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
-        const size =
-            (this.files[0].size / 1024 / 1024).toFixed(2);
 
-        if (size > 0.5) {
-            alert("รูปภาพต้องไม่เกิน 500kb");
-            this.value = '';
-        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -563,13 +560,7 @@
 
         var files = $('#pic_cer_img_3')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
-        const size =
-            (this.files[0].size / 1024 / 1024).toFixed(2);
 
-        if (size > 0.5) {
-            alert("รูปภาพต้องไม่เกิน 500kb");
-            this.value = '';
-        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
@@ -604,13 +595,7 @@
 
         var files = $('#pic_cer_img_4')[0].files; //เป็นการดึงข้อมูลรูปภาพเพื่อเตรียมเช็คไฟล์ก่อนทำงานส่วน Ajax
 
-        const size =
-            (this.files[0].size / 1024 / 1024).toFixed(2);
 
-        if (size > 0.5) {
-            alert("รูปภาพต้องไม่เกิน 500kb");
-            this.value = '';
-        }
         // เช็คว่ามีไฟล์รูปภาพอยู่หรือไม่
         if (files.length > 0) {
 
