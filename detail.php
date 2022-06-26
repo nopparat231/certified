@@ -91,6 +91,9 @@ if (isset($_GET['id_card'])) {
                                                     <li class="list-group-item d-flex">
                                                         <span class="w-50">เจ้าของพระ </span><span><?= $row['cer_name'] ?></span>
                                                     </li>
+                                                    <li class="list-group-item d-flex">
+                                                        <span class="w-50">หมายเหตุ </span><span><?= $row['cer_other'] ?></span>
+                                                    </li>
 
 
                                                 </ul>

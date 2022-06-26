@@ -111,11 +111,11 @@
 
     <?php } elseif (isset($_GET['edit'])) {
 
-    if (isset($_GET['id_card'])) {
+    if (isset($_GET['id_cer'])) {
 
-        $id_card = $_GET['id_card'];
+        $id_cer = $_GET['id_cer'];
 
-        $sql1 = "SELECT * FROM cer WHERE id_card = '$id_card' ";
+        $sql1 = "SELECT * FROM cer WHERE id_cer = '$id_cer' ";
         $q1 = mysqli_query($conn, $sql1);
         $row = mysqli_fetch_array($q1);
 
@@ -132,9 +132,11 @@
 
                 <form action="?cer&edit_db" method="post">
 
+                    <input type="hidden" name="id_cer" value="<?php echo $row['id_cer'] ?>"/>
+
                     <div class="mb-3">
                         <label for="id_card" class="form-label">หมายเลขบัตรรับรอง</label>
-                        <input type="text" class="form-control" id="id_card" name="id_card" value="<?php echo $row['id_card'] ?>" autocomplete="off" required readonly>
+                        <input type="text" class="form-control" id="id_card" name="id_card" value="<?php echo $row['id_card'] ?>" autocomplete="off" required >
                     </div>
 
                     <div class="mb-3">
@@ -299,9 +301,10 @@
     //แก้ไข db
 } elseif (isset($_GET['edit_db'])) {
 
-    if (isset($_POST['id_card'])) {
+    if (isset($_POST['id_cer'])) {
 
-        $strSQL = "update cer set id_card = '" . $_POST['id_card'] . "'
+        $strSQL = "update cer set id_cer = '" . $_POST['id_cer'] . "'
+        , id_card =  '" . $_POST['id_card'] . "'
         , cer_start =  '" . $_POST['cer_start'] . "'
         , cer_m_type =  '" . $_POST['cer_m_type'] . "'
         , cer_m_name =  '" . $_POST['cer_m_name'] . "'
@@ -314,7 +317,7 @@
         , cer_img_2 =  '" . $_POST['cer_img_2'] . "'
         , cer_img_3 =  '" . $_POST['cer_img_3'] . "'
         , cer_img_4 =  '" . $_POST['cer_img_4'] . "'
-        where id_card IN ('" . $_POST['id_card'] . "')";
+        where id_cer IN ('" . $_POST['id_cer'] . "')";
 
         if (mysqli_query($conn, $strSQL)) {
 
@@ -334,11 +337,11 @@
     //ลบ
 } elseif (isset($_GET['del'])) {
 
-    if (isset($_GET['id_card'])) {
+    if (isset($_GET['id_cer'])) {
 
-        $id_card = $_GET['id_card'];
+        $id_cer = $_GET['id_cer'];
 
-        $sql = "DELETE FROM cer WHERE id_card ='$id_card'";
+        $sql = "DELETE FROM cer WHERE id_cer ='$id_cer'";
 
         if (mysqli_query($conn, $sql) == TRUE) {
 
@@ -411,8 +414,8 @@
                             echo "<td> <a href='../uploads/" . $row['cer_img_2'] . "' target='_blank'><img src='../uploads/" . $row['cer_img_2'] . "' class='img-fluid' ></a> </td>";
                             echo "<td> <a href='../uploads/" . $row['cer_img_3'] . "' target='_blank'><img src='../uploads/" . $row['cer_img_3'] . "' class='img-fluid' ></a> </td>";
                             echo "<td> <a href='../uploads/" . $row['cer_img_4'] . "' target='_blank'><img src='../uploads/" . $row['cer_img_4'] . "' class='img-fluid' ></a> </td>";
-                            echo '<td style="text-align: center"> <a href="?cer&edit&id_card=' . $row['id_card'] . '" class="btn btn-warning btn-sm float-end"><i class="fas fa-pencil-alt"></i></a> </td>';
-                            echo "<td style='text-align: center'> <a href='?cer&del&id_card=" . $row['id_card'] . "' onclick=\"return confirm('ต้องการลบรายการนี้ใช่หรือไม่?')\" class='btn btn-danger btn-sm float-end'><i class='fas fa-trash'></i></a> </td>";
+                            echo '<td style="text-align: center"> <a href="?cer&edit&id_cer=' . $row['id_cer'] . '" class="btn btn-warning btn-sm float-end"><i class="fas fa-pencil-alt"></i></a> </td>';
+                            echo "<td style='text-align: center'> <a href='?cer&del&id_cer=" . $row['id_cer'] . "' onclick=\"return confirm('ต้องการลบรายการนี้ใช่หรือไม่?')\" class='btn btn-danger btn-sm float-end'><i class='fas fa-trash'></i></a> </td>";
                             echo "</tr>";
                         }
 
